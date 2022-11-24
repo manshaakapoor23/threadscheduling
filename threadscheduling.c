@@ -19,7 +19,7 @@ struct sched_param p3;
 void *countA(){
     long k,j;
     struct sched_param param1;
-    param1.sched_priority=70;
+    param1.sched_priority=60;
     struct timespec start, finish;
     pthread_setschedparam(t1,SCHED_OTHER,&param1);
     k=0;
@@ -37,7 +37,7 @@ void *countB(){
     long k;
     long j;
     struct sched_param param2;
-    param2.sched_priority=80;
+    param2.sched_priority=90;
     struct timespec start, finish;
     pthread_setschedparam(t2,SCHED_RR,&param2);
     k=0;
@@ -57,7 +57,7 @@ void *countC(){
     long j;
     struct timespec start, finish;
     struct sched_param param3;
-    param3.sched_priority=70;
+    param3.sched_priority=80;
     pthread_setschedparam(t3,SCHED_FIFO,&param3);
     k=0;
     j=pow(2,23);
