@@ -19,7 +19,7 @@ struct sched_param p3;
 void *countA(){
     long k,j;
     struct sched_param param1;
-    param1.sched_priority=50;
+    param1.sched_priority=0;
     struct timespec start, finish;
     pthread_setschedparam(t1,SCHED_OTHER,&param1);
     k=0;
